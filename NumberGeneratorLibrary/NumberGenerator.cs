@@ -10,10 +10,11 @@ namespace NumberGeneratorLibrary
     {
         public IEnumerable<string> GenerateNumbers(int startNum, int endNum, Tuple<int, string>[] tuples)
         {
+            var sb = new StringBuilder();
+
             for (int i = startNum; i <= endNum; i++)
             {
-                var sb = new StringBuilder();
-
+                sb.Clear();
                 sb.Append(i + " ");
 
                 foreach (var tuple in tuples)
